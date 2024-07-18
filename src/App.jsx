@@ -4,13 +4,14 @@ import './App.css';
 import GamePlay from './Component/GamePlay';
 function App() {
 
-  const [isGameStarted,setisGamestarted]=useState(false);
+  const [isGameStarted,setisGamestarted]=useState(true);
    const toggleGamePlay=()=>{
     setisGamestarted((prev)=> !prev);
    };
   return (
     <>
     {isGameStarted ? <GamePlay/> : <StartGame toggle={toggleGamePlay}/>}
+  
     </>
   );
 }
